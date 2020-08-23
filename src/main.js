@@ -8,7 +8,6 @@ import 'view-design/dist/styles/iview.css';
 import './index.less';
 
 Vue.config.productionTip = false
-
 Vue.use(ViewUI);
 
 // Vue.use(ViewUI, {

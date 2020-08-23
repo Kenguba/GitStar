@@ -100,70 +100,70 @@ module.exports = {
 
 //-------------------------------------------------------------
 
-const path = require('path')
-const webpack = require('webpack')
-const htmlWebpackPlugin = require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-// const {VueLoaderPlugin} = require('vue-loader')
+// const path = require('path')
+// const webpack = require('webpack')
+// const htmlWebpackPlugin = require('html-webpack-plugin')
+// const VueLoaderPlugin = require('vue-loader/lib/plugin');
+// // const {VueLoaderPlugin} = require('vue-loader')
 
 
-module.exports = {
-  mode: 'development',
-  entry: path.join(__dirname, './src/main.js'),
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
-  },
+// module.exports = {
+//   mode: 'development',
+//   entry: path.join(__dirname, './src/main.js'),
+//   output: {
+//     path: path.resolve(__dirname, './dist'),
+//     filename: 'bundle.js'
+//   },
 
 
-  devServer: {
-    // 热更新  --open --port 3000 --contentBase src --hot
-    // open: true, // 自动打开浏览器
-    // host:'',
-    port: 3000, // 设置启动时候的运行端口
-    contentBase: 'src', // 指定托管的根目录
-    hot: true // 启用热更新 的 第1步
-  },
+//   devServer: {
+//     // 热更新  --open --port 3000 --contentBase src --hot
+//     // open: true, // 自动打开浏览器
+//     // host:'',
+//     port: 3000, // 设置启动时候的运行端口
+//     contentBase: 'src', // 指定托管的根目录
+//     hot: true // 启用热更新 的 第1步
+//   },
 
 
-  plugins: [
-    // 配置插件的节点 这是 启用热更新的第 3 步
-    // new webpack.HotModuleReplacementPlugin(), 
-    new htmlWebpackPlugin({
-      template: path.join(__dirname, './src/index.html'),     //源文件
-      filename: 'index.html'                                 //生成内存中的
-    }),
-    new VueLoaderPlugin()
-  ],
+//   plugins: [
+//     // 配置插件的节点 这是 启用热更新的第 3 步
+//     // new webpack.HotModuleReplacementPlugin(), 
+//     new htmlWebpackPlugin({
+//       template: path.join(__dirname, './src/index.html'),     //源文件
+//       filename: 'index.html'                                 //生成内存中的
+//     }),
+//     new VueLoaderPlugin()
+//   ],
 
 
-  module: {// 配置所有第三方loader模块
+//   module: {// 配置所有第三方loader模块
 
-    rules: [
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
-      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?limit=7631&name=[hash:8]-[name].[ext]' },
-      { test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader' },
-      { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, //配置Babel来转换高级的ES语法
-      { test: /\.vue$/, use: 'vue-loader' } // 处理 .vue 文件的 loader
-    ]
-  },
+//     rules: [
+//       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+//       { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
+//       { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+//       { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?limit=7631&name=[hash:8]-[name].[ext]' },
+//       { test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader' },
+//       { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, //配置Babel来转换高级的ES语法
+//       { test: /\.vue$/, use: 'vue-loader' } // 处理 .vue 文件的 loader
+//     ]
+//   },
 
-  resolve: {
+//   resolve: {
 
-    extensions: ['.js', '.jsx', '.json'],  //表示这个个文件的后缀名可以不写
-    alias: {
-      "vue$": "vue/dist/vue.js", //修改导入包路径`
-      "@": path.join(__dirname, './src') //修改导入包路径
-    }
-  }
-
-
-}
+//     extensions: ['.js', '.jsx', '.json'],  //表示这个个文件的后缀名可以不写
+//     alias: {
+//       "vue$": "vue/dist/vue.js", //修改导入包路径`
+//       "@": path.join(__dirname, './src') //修改导入包路径
+//     }
+//   }
 
 
+// }
 
-// 选择开发、生产模式 development production
-// 在webpack 4 默认的entry文件入口 src / index   output出口文件 dist / main.js
-// exports default 这个是es语法，node不支持 node.js基于chorme的V8引擎
+
+
+// // 选择开发、生产模式 development production
+// // 在webpack 4 默认的entry文件入口 src / index   output出口文件 dist / main.js
+// // exports default 这个是es语法，node不支持 node.js基于chorme的V8引擎

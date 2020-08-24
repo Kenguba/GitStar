@@ -1,5 +1,5 @@
 <template>
-  <Card class="mt10 w100p ">
+  <Card class="mt10 w100p ken-card">
     <p slot="title" class="text-left">关于</p>
     <p class="text-left ">
       <Badge color="cyan" text="我要反馈" />

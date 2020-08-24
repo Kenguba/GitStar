@@ -83,8 +83,9 @@
         </div>
       </Content>
       <router-link to="/UserLayout">测试跳转</router-link>
-      <Footer class="layout-footer-center"><div @click="logout()">2020-2021 &copy; 一缕清风</div></Footer>
-      
+      <Footer class="layout-footer-center">
+        <div @click="logout()">2020-2021 &copy; 一缕清风</div>
+      </Footer>
     </Layout>
   </div>
 </template>
@@ -141,8 +142,12 @@ export default {
   methods: {
     logout: function() {
       // this.$router.push({ path: "/UserLayout", query: { setid: 123456 } });
-      this.$router.push({path:'/UserLayout',params:{setid:111222}});
+      this.$router.push({ path: "/UserLayout", params: { setid: 111222 } });
     }
+  },
+  beforeRouteLeave(to, from, next) {
+    from.meta.keepAlive = false;
+    next();
   }
 };
 </script>
@@ -285,7 +290,7 @@ export default {
   }
 }
 
- .right-section {
-    background: #fff;
-  }
+.right-section {
+  background: #fff;
+}
 </style>

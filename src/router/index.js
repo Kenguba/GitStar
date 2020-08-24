@@ -18,6 +18,10 @@ export default new Router({
           path: 'BasicLayout',
           name: 'BasicLayout',
           component: resolve => require(['../layouts/BasicLayout'], resolve), //懒加载BlankLayout, //懒加载BasicLayout
+          meta: {
+            keepAlive: true,
+            title: '首页应用'
+          }
         },
         {
           path: 'UserLayout',

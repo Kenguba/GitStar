@@ -71,6 +71,7 @@
                 <div>使用帮助</div>
               </div>
             </div>
+
             <home-tags name="name1" />
           </div>
 
@@ -97,7 +98,7 @@ import {
 } from "@/components/home";
 
 export default {
-  name:'BasicLayout',
+  name: "BasicLayout",
   components: {
     Swiper,
     Slide,
@@ -278,6 +279,11 @@ export default {
   }
   .right-section {
     margin-right: 0;
+    background: #fff;
   }
 }
+
+ .right-section {
+    background: #fff;
+  }
 </style>

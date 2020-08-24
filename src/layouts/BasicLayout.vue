@@ -91,7 +91,6 @@
             <div class="flex-2 col ml5">
               <Card class="w100p h300">
                 <p slot="title" class="text-left">个人信息</p>
-                <h3>A high quality UI Toolkit based on Vue.js</h3>
               </Card>
               <Card class="mt10 w100p">
                 <p slot="title" class="text-left">公告</p>

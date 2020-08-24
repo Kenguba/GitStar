@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name:'list-show',
   data() {
     return {
       data: [

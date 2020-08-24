@@ -7,10 +7,11 @@ import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 import './styles/index.less';
 import './styles/commom.less';
+import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false
 Vue.use(ViewUI);
-
+Vue.use(VueRouter) 
 
 
 

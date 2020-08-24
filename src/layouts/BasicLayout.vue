@@ -98,6 +98,7 @@ import {
 } from "@/components/home";
 
 export default {
+  name:'BasicLayout',
   components: {
     Swiper,
     Slide,

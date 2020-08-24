@@ -48,7 +48,7 @@
     <div class="personal-item">
       <img src="../../../src/assets/home/target_repo.svg" alt srcset />
       <span>目标仓库:</span>
-      <span >
+      <span>
         <Tooltip content="KenGuba/google-access-helper">KenGuba/google-access-helper</Tooltip>
       </span>
     </div>
@@ -56,6 +56,7 @@
 </template>
 <script>
 export default {
+  name: "personal-information",
   data() {
     return {
       switch1: true

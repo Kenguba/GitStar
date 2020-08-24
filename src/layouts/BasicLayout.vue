@@ -12,16 +12,16 @@
             </router-link>
             <div class="layout-nav">
               <MenuItem name="1">
-                <Poptip class="white" trigger="hover" title="扫描APP下载" placement="bottom">
-                  <Icon type="ios-navigate"></Icon>App下载
+                <Poptip trigger="hover" title="扫描APP下载" placement="bottom">
+                  <Icon type="ios-navigate" />App下载
                   <div slot="content">
                     <img id="down_app" :src="down_app" alt srcset />
                   </div>
                 </Poptip>
               </MenuItem>
               <MenuItem name="2">
-                <Poptip class="white" trigger="hover" title="App扫描登陆" placement="bottom">
-                  <Icon type="ios-keypad"></Icon>App登陆
+                <Poptip trigger="hover" title="App扫描登陆" placement="bottom">
+                  <Icon type="ios-keypad" />App登陆
                   <div slot="content">
                     <img id="down_app" :src="app_login" alt srcset />
                   </div>
@@ -104,7 +104,6 @@ import web from "../../config/web.base.js";
 import { Swiper, Slide } from "vue-swiper-component";
 import { About, Notice } from "@/components/home";
 
-
 export default {
   components: {
     Swiper,
@@ -161,7 +160,8 @@ export default {
 
 
 <style scoped lang='less'>
-@layout-header-background   : #22c25e;
+@import '../styles/theme.less';
+
 .layout-logo {
   height: 100%;
   /* background: #5b6270; */
@@ -187,6 +187,7 @@ export default {
   margin: 0 auto;
   margin-right: 20px;
 }
+
 .layout-footer-center {
   text-align: center;
 }
@@ -204,11 +205,13 @@ export default {
 #profile {
   display: flex;
   padding-left: 0.2rem;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
   align-items: center;
   div {
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
+    margin-top: 2px;
   }
 }
 
@@ -242,13 +245,13 @@ export default {
   }
 }
 
-.header-container{
+.header-container {
   width: 100%;
   height: 60px;
-  background:@layout-header-background ;
+  background: @layout-header-background;
 }
- .header{
- }
+.header {
+}
 
 @media screen and (min-width: 1368px) and (max-width: 1980px) {
   .content,

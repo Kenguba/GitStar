@@ -80,7 +80,7 @@ export default {
       width: 25px;
     }
     img:nth-child(2) {
-      width: 31px !important;
+      width: 30px !important;
     }
   }
 }

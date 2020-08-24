@@ -52,7 +52,7 @@
         </Menu>
       </Header>
 
-      <Content class="content" :style="{padding: '0 50px'}">
+      <Content class="content">
         <!-- <Breadcrumb :style="{margin: '20px 0'}">
           <BreadcrumbItem>Home</BreadcrumbItem>
           <BreadcrumbItem>Components</BreadcrumbItem>
@@ -60,7 +60,7 @@
         </Breadcrumb>-->
 
         <div id="row">
-          <div class="flex-7 mr40 col">
+          <div class="flex-7 mr30 col">
             <div class="flex">
               <div class="carousel w100p flex-3">
                 <Swiper
@@ -246,6 +246,13 @@ export default {
     div:nth-child(2) {
       background: #ffb800;
     }
+  }
+}
+
+@media screen and (min-width: 1368px)  and (max-width: 1980px) {
+  .content {
+    width: 1368px;
+    margin: 0 auto;
   }
 }
 </style>

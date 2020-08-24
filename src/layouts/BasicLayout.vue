@@ -38,6 +38,7 @@
                   <DropdownItem disabled>点赞统计</DropdownItem>
                   <DropdownItem>收入来源</DropdownItem>
                   <DropdownItem divided>设置</DropdownItem>
+                  <DropdownItem divided>退出</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </MenuItem>

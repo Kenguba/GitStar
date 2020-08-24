@@ -20,7 +20,13 @@
     <div class="personal-item">
       <img src="../../../src/assets/home/watch.svg" alt srcset />
       <span>watch:</span>
-      <span>45</span>
+      <span class="sb">
+        <span>45</span>
+        <i-switch v-model="switch1" true-color="#13ce66">
+          <span slot="open">开</span>
+          <span slot="close">关</span>
+        </i-switch>
+      </span>
     </div>
     <div class="personal-item">
       <img src="../../../src/assets/home/fork.svg" alt srcset />
@@ -31,12 +37,18 @@
     <div class="personal-item">
       <img src="../../../src/assets/home/follower.svg" alt srcset />
       <span>follow:</span>
-      <span>14</span>
+      <span class="sb">
+        14
+        <i-switch true-color="#13ce66">
+          <span slot="open">开</span>
+          <span slot="close">关</span>
+        </i-switch>
+      </span>
     </div>
     <div class="personal-item">
       <img src="../../../src/assets/home/target_repo.svg" alt srcset />
       <span>目标仓库:</span>
-      <span>
+      <span >
         <Tooltip content="KenGuba/google-access-helper">KenGuba/google-access-helper</Tooltip>
       </span>
     </div>
@@ -45,7 +57,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      switch1: true
+    };
   }
 };
 </script>

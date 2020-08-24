@@ -50,9 +50,9 @@
 
       <Content class="content">
         <div class="row row-content">
-          <div class="left-flex mr30 col right-section">
+          <div class="flex-7 mr30 col right-section">
             <div class="flex">
-              <div class="carousel w100p flex-3">
+              <div class="carousel flex-3">
                 <Swiper
                   v-if="slidesReal.length > 0"
                   :autoPlay="true"
@@ -67,8 +67,8 @@
                 </Swiper>
               </div>
               <div class="showcolumn col flex-1 xs-hide">
-                <div class="h100p w100p">我要上头条</div>
-                <div class="blue h100p w100p">使用帮助</div>
+                <div>我要上头条</div>
+                <div>使用帮助</div>
               </div>
             </div>
             <Tabs value="name1">
@@ -87,9 +87,7 @@
           </div>
 
           <div class="flex-3 col ml5 xs-hide">
-            <Card class="w100p h300">
-              <p slot="title" class="text-left">个人信息</p>
-            </Card>
+            <PersonalInformation />
             <Notice />
             <About />
           </div>
@@ -102,7 +100,12 @@
 <script>
 import web from "../../config/web.base.js";
 import { Swiper, Slide } from "vue-swiper-component";
-import { About, Notice, ListShow } from "@/components/home";
+import {
+  About,
+  Notice,
+  ListShow,
+  PersonalInformation
+} from "@/components/home";
 
 export default {
   components: {
@@ -110,7 +113,8 @@ export default {
     Slide,
     About,
     Notice,
-    ListShow
+    ListShow,
+    PersonalInformation
   },
   data() {
     return {
@@ -235,23 +239,19 @@ export default {
 
 .row {
   display: flex;
-  height: 800px;
   .carousel {
-    height: 400px;
-    width: 300px;
     overflow: hidden;
   }
 
   .showcolumn {
-    height: 400px;
     div {
-      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 1.6rem;
       font-weight: bold;
       color: #fff;
+      flex: 1;
     }
     div:nth-child(1) {
       background: #01aaed;

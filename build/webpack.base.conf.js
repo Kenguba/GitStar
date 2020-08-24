@@ -40,7 +40,7 @@ module.exports = {
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      // ...(config.dev.useEslint ? [createLintingRule()] : []),
       // { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       // {
       //   test: /\.less$/,

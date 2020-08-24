@@ -1,127 +1,126 @@
 <template>
-  <div class="layout">
-    <Layout>
-      <Header>
-        <Menu mode="horizontal" theme="dark" active-name="1">
-          <router-link to="/">
-            <div class="layout-logo">
-              <img :src="logo_address" alt srcset />
-              <span>GitStart</span>
-            </div>
-          </router-link>
-          <div class="layout-nav">
-            <MenuItem name="1">
-              <Poptip class="white" trigger="hover" title="扫描APP下载" placement="bottom">
-                <Icon type="ios-navigate"></Icon>App下载
-                <div slot="content">
-                  <img id="down_app" :src="down_app" alt srcset />
-                </div>
-              </Poptip>
-            </MenuItem>
-            <MenuItem name="2">
-              <Poptip class="white" trigger="hover" title="App扫描登陆" placement="bottom">
-                <Icon type="ios-keypad"></Icon>App登陆
-                <div slot="content">
-                  <img id="down_app" :src="app_login" alt srcset />
-                </div>
-              </Poptip>
-            </MenuItem>
-            <MenuItem name="3">
-              <Dropdown>
-                <div id="profile">
-                  <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
-                  <div>一缕清风</div>
-                </div>
-                <DropdownMenu slot="list">
-                  <DropdownItem>帐户信息</DropdownItem>
-                  <DropdownItem>个人仓库</DropdownItem>
-                  <DropdownItem disabled>点赞统计</DropdownItem>
-                  <DropdownItem>收入来源</DropdownItem>
-                  <DropdownItem divided>设置</DropdownItem>
-                  <DropdownItem divided>退出</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </MenuItem>
-            <!-- <MenuItem name="4">
-              <Icon type="ios-paper"></Icon>Item 4
-            </MenuItem>-->
+  <Layout>
+    <Header>
+      <Menu mode="horizontal" theme="dark" active-name="1">
+        <router-link to="/UserLayout">
+          <div class="layout-logo">
+            <img :src="logo_address" alt srcset />
+            <span>GitStart</span>
           </div>
-        </Menu>
-      </Header>
+        </router-link>
+        <div class="layout-nav">
+          <MenuItem name="1">
+            <Poptip class="white" trigger="hover" title="扫描APP下载" placement="bottom">
+              <Icon type="ios-navigate"></Icon>App下载
+              <div slot="content">
+                <img id="down_app" :src="down_app" alt srcset />
+              </div>
+            </Poptip>
+          </MenuItem>
+          <MenuItem name="2">
+            <Poptip class="white" trigger="hover" title="App扫描登陆" placement="bottom">
+              <Icon type="ios-keypad"></Icon>App登陆
+              <div slot="content">
+                <img id="down_app" :src="app_login" alt srcset />
+              </div>
+            </Poptip>
+          </MenuItem>
+          <MenuItem name="3">
+            <Dropdown>
+              <div id="profile">
+                <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
+                <div>一缕清风</div>
+              </div>
+              <DropdownMenu slot="list">
+                <DropdownItem>帐户信息</DropdownItem>
+                <DropdownItem>个人仓库</DropdownItem>
+                <DropdownItem disabled>点赞统计</DropdownItem>
+                <DropdownItem>收入来源</DropdownItem>
+                <DropdownItem divided>设置</DropdownItem>
 
-      <Content class="content" :style="{padding: '0 50px'}">
-        <!-- <Breadcrumb :style="{margin: '20px 0'}">
+                <DropdownItem divided >
+                  <div @click="logout()">退出</div>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </MenuItem>
+          <!-- <MenuItem name="4">
+              <Icon type="ios-paper"></Icon>Item 4
+          </MenuItem>-->
+        </div>
+      </Menu>
+    </Header>
+
+    <Content class="content" :style="{padding: '0 50px'}">
+      <!-- <Breadcrumb :style="{margin: '20px 0'}">
           <BreadcrumbItem>Home</BreadcrumbItem>
           <BreadcrumbItem>Components</BreadcrumbItem>
           <BreadcrumbItem>Layout</BreadcrumbItem>
-        </Breadcrumb>-->
+      </Breadcrumb>-->
 
-        <Card>
-          <div id="row">
-            <div class="flex-7 mr40 col">
-              <div class="flex">
-                <div class="carousel w100p flex-3">
-                  <Swiper
-                    v-if="slidesReal.length > 0"
-                    :autoPlay="true"
-                    :showIndicator="true"
-                    interval="2500"
-                    duration="500"
-                    style="w100p"
-                  >
-                    <Slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
-                      <img class="w100p" :src="swiper_img1" alt srcset />
-                    </Slide>
-                  </Swiper>
-                </div>
-                <div class="showcolumn col flex-1">
-                  <div class="h100p w100p">我要上头条</div>
-                  <div class="blue h100p w100p">使用帮助</div>
-                </div>
-              </div>
-              <Tabs value="name1">
-                <TabPane :label="label" name="name1">标签一的内容</TabPane>
-                <TabPane label="互粉列表" name="name2">标签二的内容</TabPane>
-                <TabPane label="Star记录" name="name3">标签三的内容</TabPane>
-                <TabPane label="Watch记录" name="name4">标签三的内容</TabPane>
-                <TabPane label="Fork记录" name="name5">标签三的内容</TabPane>
-                <TabPane label="Follow记录" name="name6">标签三的内容</TabPane>
-                <TabPane label="排行榜" name="name7">标签三的内容</TabPane>
-              </Tabs>
+      <div id="row">
+        <div class="flex-7 mr40 col">
+          <div class="flex">
+            <div class="carousel w100p flex-3">
+              <Swiper
+                v-if="slidesReal.length > 0"
+                :autoPlay="true"
+                :showIndicator="true"
+                interval="3000"
+                duration="800"
+                style="w100p"
+              >
+                <Slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
+                  <img class="w100p" :src="item.img" alt srcset />
+                </Slide>
+              </Swiper>
             </div>
-            <div class="flex-2 col ml5">
-              <Card class="w100p h300">
-                <p slot="title" class="text-left">个人信息</p>
-              </Card>
-              <Card class="mt10 w100p">
-                <p slot="title" class="text-left">公告</p>
-                <h3 class="text-left color-red">
-                  1，点赞时出现数据加载不出来的情况，可以借助梯子，推荐免费的蓝灯。
-                  2，标记为失信的用户，大家不要对其点赞，已点过赞的可自行取消。
-                </h3>
-              </Card>
-              <Card class="mt10 w100p aaaa">
-                <p slot="title" class="text-left">关于</p>
-                <Badge color="cyan" text="我要反馈" />
-                <br />
-                <Badge color="cyan" text="app下载" />
-                <br />
-                <Badge color="cyan" text="交流群:904860781" />
-                <br />
-                <Badge color="cyan" text="商务合作" />
-                <br />
-                <Badge color="cyan" text="赞助本站" />
-                <br />
-              </Card>
+            <div class="showcolumn col flex-1">
+              <div class="h100p w100p">我要上头条</div>
+              <div class="blue h100p w100p">使用帮助</div>
             </div>
           </div>
+          <Tabs value="name1">
+            <TabPane :label="label" name="name1">标签一的内容</TabPane>
+            <TabPane label="互粉列表" name="name2">标签二的内容</TabPane>
+            <TabPane label="Star记录" name="name3">标签三的内容</TabPane>
+            <TabPane label="Watch记录" name="name4">标签三的内容</TabPane>
+            <TabPane label="Fork记录" name="name5">标签三的内容</TabPane>
+            <TabPane label="Follow记录" name="name6">标签三的内容</TabPane>
+            <TabPane label="排行榜" name="name7">标签三的内容</TabPane>
+          </Tabs>
+        </div>
+        <div class="flex-2 col ml5">
+          <Card class="w100p h300">
+            <p slot="title" class="text-left">个人信息</p>
+          </Card>
+          <Card class="mt10 w100p">
+            <p slot="title" class="text-left">公告</p>
+            <h3 class="text-left color-red">
+              1，点赞时出现数据加载不出来的情况，可以借助梯子，推荐免费的蓝灯。
+              2，标记为失信的用户，大家不要对其点赞，已点过赞的可自行取消。
+            </h3>
+          </Card>
+          <Card class="mt10 w100p aaaa">
+            <p slot="title" class="text-left">关于</p>
+            <Badge color="cyan" text="我要反馈" />
+            <br />
+            <Badge color="cyan" text="app下载" />
+            <br />
+            <Badge color="cyan" text="交流群:904860781" />
+            <br />
+            <Badge color="cyan" text="商务合作" />
+            <br />
+            <Badge color="cyan" text="赞助本站" />
+            <br />
+          </Card>
+        </div>
+      </div>
 
-          <div style="min-height: 200px;"></div>
-        </Card>
-      </Content>
-      <Footer class="layout-footer-center">2020-2021 &copy; 一缕清风</Footer>
-    </Layout>
-  </div>
+      <div style="min-height: 200px;"></div>
+    </Content>
+    <Footer class="layout-footer-center">2020-2021 &copy; 一缕清风</Footer>
+  </Layout>
 </template>
 <script>
 import web from "../../config/web.base.js";
@@ -146,12 +145,34 @@ export default {
           })
         ]);
       },
-      slidesReal: [1, 2, 3, 4, 5]
+      slidesReal: [
+        {
+          img: web.domain + "/media/banner/better-gesture.png"
+        },
+        {
+          img: web.domain + "/media/banner/quickredis.jpg"
+        },
+        {
+          img: web.domain + "/media/banner/better-gesture.png"
+        },
+        {
+          img: web.domain + "/media/banner/better-gesture.png"
+        },
+        {
+          img: web.domain + "/media/banner/better-gesture.png"
+        }
+      ]
     };
   },
   components: {
     Swiper,
     Slide
+  },
+  methods:{
+    logout:function(){
+    this.$router.push({path:'/UserLayout',query:{setid:123456}});
+    // this.$router.push({path:'/UserLayout',params:{setid:111222}});
+    }
   }
 };
 </script>
@@ -224,7 +245,7 @@ html {
 #row {
   display: flex;
   height: 800px;
-
+  margin-top: 20px;
   .carousel {
     height: 400px;
     width: 300px;
@@ -332,6 +353,9 @@ html {
 
   .mt10 {
     margin-top: 10px;
+  }
+  .mt40 {
+    margin-top: 40px;
   }
   .ml5 {
     margin-left: 5px;

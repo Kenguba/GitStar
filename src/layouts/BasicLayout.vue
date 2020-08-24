@@ -50,7 +50,7 @@
 
       <Content class="content">
         <div id="row">
-          <div class="flex-7 mr30 col">
+          <div class="flex-7 mr30 col right-section">
             <div class="flex">
               <div class="carousel w100p flex-3">
                 <Swiper
@@ -271,6 +271,9 @@ export default {
   .header {
     width: 1368px;
     margin: 0 auto;
+  }
+  .right-section {
+    margin-right: 0;
   }
 }
 

@@ -5,7 +5,8 @@
         <div class="list-wrap" v-for="(item,index) in data1" :key="index">
           <div class="upper-strata">
             <div>
-              <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />zsdevX/Dartey
+              <Avatar class="mr5" src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
+              zsdevX/Dartey
             </div>
             <strong>
               <Badge color="blue" />Go

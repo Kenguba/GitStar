@@ -6,7 +6,7 @@
           <router-link to="/">
             <div class="layout-logo">
               <img :src="logo_address" alt srcset />
-              <span>GitStart</span>
+              <span class="xs-hide">GitStart</span>
             </div>
           </router-link>
 
@@ -168,7 +168,8 @@ export default {
   font-size: 2.2rem;
   font-weight: 500;
   img {
-    height: 60%;
+    margin-left: 5px;
+    height: @img-logo-height;
   }
   span {
     margin-top: 3px;

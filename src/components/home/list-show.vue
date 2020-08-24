@@ -2,7 +2,7 @@
   <div>
     <div v-for="(item,index) in data1" :key="index">
       <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
-      zsdevX/Dartey
+      <span class="ml10">zsdevX/Dartey</span>
       <ul class="likebar">
         <li>
           <Icon type="ios-star-outline" />89

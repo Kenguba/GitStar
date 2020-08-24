@@ -20,8 +20,11 @@
         </div>
       </div>
     </TabPane>
-    <TabPane label="标签二" name="name2"></TabPane>
-    <TabPane label="标签三" name="name3">标签三的内容</TabPane>
+    <TabPane label="star记录" name="name2"></TabPane>
+    <TabPane label="Watch记录" name="name3">标签三的内容</TabPane>
+    <TabPane label="Fork记录" name="name4">标签三的内容</TabPane>
+    <TabPane label="Follow记录" name="name5">标签三的内容</TabPane>
+    <TabPane label="排行榜" name="name6">标签三的内容</TabPane>
   </Tabs>
 </template>
 

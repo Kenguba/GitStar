@@ -13,7 +13,7 @@
           <div class="layout-nav">
             <div name="1" class="xs-hide">
               <Poptip trigger="hover" title="扫描APP下载" placement="bottom">
-                <Icon type="ios-navigate" />App下载
+                <Icon type="ios-navigate" />  App下载
                 <div slot="content">
                   <img id="down_app" :src="down_app" alt srcset />
                 </div>
@@ -21,7 +21,7 @@
             </div>
             <div name="2" class="xs-hide">
               <Poptip trigger="hover" title="App扫描登陆" placement="bottom">
-                <Icon type="ios-keypad" />App登陆
+                <Icon type="ios-keypad" />  App登陆
                 <div slot="content">
                   <img id="down_app" :src="app_login" alt srcset />
                 </div>
@@ -61,7 +61,7 @@
                   duration="800"
                   style="w100p"
                 >
-                  <slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
+                  <slide v-for="(item,index) in slidesReal" :key="index">
                     <img class="w100p" :src="item.img" alt srcset />
                   </slide>
                 </swiper>
@@ -168,7 +168,6 @@ export default {
   font-size: 2.2rem;
   font-weight: 500;
   img {
-    margin-left: 10px;
     height: 60%;
   }
   span {

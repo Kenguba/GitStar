@@ -69,7 +69,7 @@
                   </Slide>
                 </Swiper>
               </div>
-              <div class="showcolumn col flex-1">
+              <div class="showcolumn col flex-1 xs-hide">
                 <div class="h100p w100p">我要上头条</div>
                 <div class="blue h100p w100p">使用帮助</div>
               </div>
@@ -84,7 +84,8 @@
               <TabPane label="排行榜" name="name7">标签三的内容</TabPane>
             </Tabs>
           </div>
-          <div class="flex-2 col ml5">
+
+          <div class="flex-2 col ml5 xs-hide">
             <Card class="w100p h300">
               <p slot="title" class="text-left">个人信息</p>
             </Card>
@@ -92,8 +93,6 @@
             <About />
           </div>
         </div>
-
-        <div style="min-height: 200px;"></div>
       </Content>
       <Footer class="layout-footer-center">2020-2021 &copy; 一缕清风</Footer>
     </Layout>
@@ -160,7 +159,7 @@ export default {
 
 
 <style scoped lang='less'>
-@import '../styles/theme.less';
+@import "../styles/theme.less";
 
 .layout-logo {
   height: 100%;
@@ -258,6 +257,12 @@ export default {
   .header {
     width: 1368px;
     margin: 0 auto;
+  }
+}
+
+@media screen and(max-width: 480px) {
+  .xs-hide {
+    display: none;
   }
 }
 </style>

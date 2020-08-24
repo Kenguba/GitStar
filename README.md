@@ -1,6 +1,3 @@
-# githubstart
-
-> A Vue.js project
 
 ## 构建和安装
 
@@ -30,19 +27,19 @@ npm test
 ## 目录结构
 ```
 github_client_app
-├── android
-├── ios
-├── fonts                  用于保存Icon文件
-├── imgs                   用于保存图
+├── build
+├── config                
+├── test                   单元测试
 ├── jsons                  将Json转成Dart Model类,用于保存Json文件
 ├── l10n-arb               用于保存各国语言对应的arb文件
-├── lib 
-│    ├── common            一些工具类，如通用方法类、网络接口类、保存全局变量的静态类等
-│    ├── l10n              国际化相关的类都在此目录下
-│    ├── models            Json文件对应的Dart Model类会在此目录下
-│    ├── states            保存APP中需要跨组件共享的状态类
-│    ├── routes            存放所有路由页面类
-│    └── widgets           APP内封装的一些Widget组件都在该目录下
+├── src                    开发入口
+│    ├── assets            通用资源
+│    ├── components        分块组件    
+│    ├── layouts           布局
+│    ├── router            路由
+│    ├── styles            css、less、sass样式代码
+     ├── App.vue           vue入口模块代码
+│    └── main.js           vue入口代码           
 └── test
 ```
 

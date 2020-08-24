@@ -44,6 +44,8 @@ export default {
 
 
 <style scoped lang='less'>
+@import "../styles/theme.less";
+
 .user-login-container {
   width: 368px;
   display: flex;
@@ -68,4 +70,13 @@ export default {
     }
   }
 }
+
+
+
+@media screen and(max-width: @main-mobile-max-width) {
+  .xs-hide {
+    display: none;
+  }
+}
+
 </style>

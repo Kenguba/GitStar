@@ -211,7 +211,7 @@ export default {
 #profile {
   display: flex;
   padding-left: 0.2rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #fff;
   align-items: center;
@@ -262,6 +262,7 @@ export default {
   justify-content: space-between;
   background: @layout-header-background;
   height: @header-height;
+  width: 100%;
 }
 
 .row-content {
@@ -271,7 +272,7 @@ export default {
 @media screen and (min-width: 1368px) and (max-width: 1980px) {
   .content,
   .header {
-    width: 1368px;
+    width: @main-laptop-width;
     margin: 0 auto;
   }
 }

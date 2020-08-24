@@ -79,6 +79,9 @@ export default {
       margin-right: 8px;
       width: 25px;
     }
+    img:nth-child(2) {
+      width: 31px !important;
+    }
   }
 }
 
@@ -88,6 +91,9 @@ export default {
   }
   .user-login-container {
     width: 90%;
+    left: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 </style>

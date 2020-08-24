@@ -4,9 +4,9 @@
       <div class="header-container">
         <div class="header">
           <router-link to="/">
-            <div class="layout-logo">
+            <div class="layout-logo xs-hide">
               <img class="img-logo-height" :src="logo_address" alt srcset />
-              <span class="xs-hide">GitStart</span>
+              <span >GitStart</span>
             </div>
           </router-link>
 

@@ -33,7 +33,7 @@
       <span>fork:</span>
       <span>35</span>
     </div>
-    <Divider dashed="true" />
+    <Divider dashed />
     <div class="personal-item">
       <img src="../../../src/assets/home/follower.svg" alt srcset />
       <span>follow:</span>

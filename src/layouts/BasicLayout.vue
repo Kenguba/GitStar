@@ -48,6 +48,8 @@
         </div>
       </div>
 
+
+
       <Content class="content">
         <div class="row row-content">
           <div class="flex-7 mr30 col right-section">
@@ -71,7 +73,7 @@
                 <div>使用帮助</div>
               </div>
             </div>
-            <HomeTags />
+            <HomeTags name="name1" />
           </div>
 
           <div class="flex-3 col ml5 xs-hide">

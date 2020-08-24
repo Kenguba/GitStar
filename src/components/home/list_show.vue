@@ -1,11 +1,11 @@
 <template>
-  <List item-layout="vertical">
-    <ListItem v-for="item in data" :key="item.title">
-      <ListItemMeta :avatar="item.avatar" :title="item.title" :description="item.description" />
-      {{ item.content }}
-      <template slot="action">
+  <div>
+    <div v-for="(item,index) in data" :key="index">
+      <Avatar :src="item.avatar" />
+      {{ item.avatar }}
+      <ul class="likebar">
         <li>
-          <Icon type="ios-star-outline" />123
+          <Icon type="ios-star-outline" />89
         </li>
         <li>
           <Icon type="ios-thumbs-up-outline" />234
@@ -13,15 +13,9 @@
         <li>
           <Icon type="ios-chatbubbles-outline" />345
         </li>
-      </template>
-      <template slot="extra">
-        <img
-          src="https://dev-file.iviewui.com/5wxHCQMUyrauMCGSVEYVxHR5JmvS7DpH/large"
-          style="width: 280px"
-        />
-      </template>
-    </ListItem>
-  </List>
+      </ul>
+    </div>
+  </div>
 </template>
 
 
@@ -31,29 +25,29 @@ export default {
     return {
       data: [
         {
-          title: "This is title 1",
+          title: "zsdevX/Dartey",
           description:
             "This is description, this is description, this is description.",
           avatar:
-            "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
+            "https://i.loli.net/2017/08/21/599a521472424.jpg",
           content:
             "This is the content, this is the content, this is the content, this is the content."
         },
         {
-          title: "This is title 2",
+          title: "zsdevX/Dartey",
           description:
             "This is description, this is description, this is description.",
           avatar:
-            "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
+            "https://i.loli.net/2017/08/21/599a521472424.jpg",
           content:
             "This is the content, this is the content, this is the content, this is the content."
         },
         {
-          title: "This is title 3",
+          title: "zsdevX/Dartey",
           description:
             "This is description, this is description, this is description.",
           avatar:
-            "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
+            "https://i.loli.net/2017/08/21/599a521472424.jpg",
           content:
             "This is the content, this is the content, this is the content, this is the content."
         }
@@ -62,3 +56,10 @@ export default {
   }
 };
 </script>
+
+<style lang="less" scoped>
+.likebar{
+ display: flex;
+ justify-self: start;
+}
+</style>

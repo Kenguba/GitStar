@@ -1,64 +1,57 @@
 <template>
   <div class="layout">
     <Layout>
-      <Header>
-        <Menu mode="horizontal" theme="dark" active-name="1">
-          <router-link to="/">
-            <div class="layout-logo">
-              <img :src="logo_address" alt srcset />
-              <span>GitStart</span>
-            </div>
-          </router-link>
-          <div class="layout-nav">
-            <MenuItem name="1">
-              <Poptip class="white" trigger="hover" title="扫描APP下载" placement="bottom">
-                <Icon type="ios-navigate"></Icon>App下载
-                <div slot="content">
-                  <img id="down_app" :src="down_app" alt srcset />
-                </div>
-              </Poptip>
-            </MenuItem>
-            <MenuItem name="2">
-              <Poptip class="white" trigger="hover" title="App扫描登陆" placement="bottom">
-                <Icon type="ios-keypad"></Icon>App登陆
-                <div slot="content">
-                  <img id="down_app" :src="app_login" alt srcset />
-                </div>
-              </Poptip>
-            </MenuItem>
-            <MenuItem name="3">
-              <Dropdown>
-                <div id="profile">
-                  <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
-                  <div>一缕清风</div>
-                </div>
-                <DropdownMenu slot="list">
-                  <DropdownItem>帐户信息</DropdownItem>
-                  <DropdownItem>个人仓库</DropdownItem>
-                  <DropdownItem disabled>点赞统计</DropdownItem>
-                  <DropdownItem>收入来源</DropdownItem>
-                  <DropdownItem divided>设置</DropdownItem>
+      <div class="header-container">
+        <div class="header">
+          <Menu mode="horizontal" theme="dark" active-name="1">
+            <router-link to="/">
+              <div class="layout-logo">
+                <img :src="logo_address" alt srcset />
+                <span>GitStart</span>
+              </div>
+            </router-link>
+            <div class="layout-nav">
+              <MenuItem name="1">
+                <Poptip class="white" trigger="hover" title="扫描APP下载" placement="bottom">
+                  <Icon type="ios-navigate"></Icon>App下载
+                  <div slot="content">
+                    <img id="down_app" :src="down_app" alt srcset />
+                  </div>
+                </Poptip>
+              </MenuItem>
+              <MenuItem name="2">
+                <Poptip class="white" trigger="hover" title="App扫描登陆" placement="bottom">
+                  <Icon type="ios-keypad"></Icon>App登陆
+                  <div slot="content">
+                    <img id="down_app" :src="app_login" alt srcset />
+                  </div>
+                </Poptip>
+              </MenuItem>
+              <MenuItem name="3">
+                <Dropdown>
+                  <div id="profile">
+                    <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
+                    <div>一缕清风</div>
+                  </div>
+                  <DropdownMenu slot="list">
+                    <DropdownItem>帐户信息</DropdownItem>
+                    <DropdownItem>个人仓库</DropdownItem>
+                    <DropdownItem disabled>点赞统计</DropdownItem>
+                    <DropdownItem>收入来源</DropdownItem>
+                    <DropdownItem divided>设置</DropdownItem>
 
-                  <DropdownItem divided>
-                    <div @click="logout()">退出</div>
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </MenuItem>
-            <!-- <MenuItem name="4">
-              <Icon type="ios-paper"></Icon>Item 4
-            </MenuItem>-->
-          </div>
-        </Menu>
-      </Header>
+                    <DropdownItem divided>
+                      <div @click="logout()">退出</div>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              </MenuItem>
+            </div>
+          </Menu>
+        </div>
+      </div>
 
       <Content class="content">
-        <!-- <Breadcrumb :style="{margin: '20px 0'}">
-          <BreadcrumbItem>Home</BreadcrumbItem>
-          <BreadcrumbItem>Components</BreadcrumbItem>
-          <BreadcrumbItem>Layout</BreadcrumbItem>
-        </Breadcrumb>-->
-
         <div id="row">
           <div class="flex-7 mr30 col">
             <div class="flex">
@@ -110,6 +103,7 @@
 import web from "../../config/web.base.js";
 import { Swiper, Slide } from "vue-swiper-component";
 import { About, Notice } from "@/components/home";
+
 
 export default {
   components: {
@@ -167,14 +161,13 @@ export default {
 
 
 <style scoped lang='less'>
+@layout-header-background   : #22c25e;
 .layout-logo {
-  width: 250px;
   height: 100%;
   /* background: #5b6270; */
   border-radius: 3px;
   float: left;
   position: relative;
-  left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,8 +242,17 @@ export default {
   }
 }
 
-@media screen and (min-width: 1368px)  and (max-width: 1980px) {
-  .content {
+.header-container{
+  width: 100%;
+  height: 60px;
+  background:@layout-header-background ;
+}
+ .header{
+ }
+
+@media screen and (min-width: 1368px) and (max-width: 1980px) {
+  .content,
+  .header {
     width: 1368px;
     margin: 0 auto;
   }

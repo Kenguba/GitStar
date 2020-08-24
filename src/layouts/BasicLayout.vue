@@ -11,7 +11,7 @@
           </router-link>
 
           <div class="layout-nav">
-            <div name="1">
+            <div name="1" class="xs-hide">
               <Poptip trigger="hover" title="扫描APP下载" placement="bottom">
                 <Icon type="ios-navigate" />App下载
                 <div slot="content">

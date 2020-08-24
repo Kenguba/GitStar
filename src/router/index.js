@@ -12,17 +12,17 @@ export default new Router({
       path: '/',
       name: 'BlankLayout',
       redirect: 'BasicLayout',
-      component: BlankLayout,
+      component: resolve => require(['../layouts/BlankLayout'], resolve), //懒加载BlankLayout
       children: [
         {
           path: 'BasicLayout',
           name: 'BasicLayout',
-          component: BasicLayout
+          component: resolve => require(['../layouts/BasicLayout'], resolve), //懒加载BlankLayout, //懒加载BasicLayout
         },
         {
           path: 'UserLayout',
           name: 'UserLayout',
-          component: UserLayout
+          component: UserLayout, //懒加载UserLayout
         }
       ]
     }

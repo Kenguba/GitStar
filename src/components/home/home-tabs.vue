@@ -1,12 +1,11 @@
 <template>
   <Tabs value="name1">
     <TabPane :label="label" name="name1">
-      <div class="list-container">
-        <div class="list-wrap" v-for="(item,index) in data" :key="index">
+      <div class="list-container" @click="emitParent()">
+        <div class="list-wrap" v-for="(item,index) in data1" :key="index">
           <div class="upper-strata">
             <div>
-              <Avatar :src="item.avatar" />
-              {{ item.title }}
+              <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />zsdevX/Dartey
             </div>
             <strong>
               <Badge color="blue" />Go
@@ -33,6 +32,11 @@ export default {
   components: {
     ListShow
   },
+  methods: {
+    emitParent() {
+      this.$emit('logoutCB')
+    }
+  },
   data() {
     return {
       label: h => {
@@ -45,23 +49,8 @@ export default {
           })
         ]);
       },
+      data1: Array.from({ length: 100 }, (item, index) => index),
       data: [
-        {
-          title: "zsdevX/Dartey",
-          description:
-            "This is description, this is description, this is description.",
-          avatar: "https://i.loli.net/2017/08/21/599a521472424.jpg",
-          content:
-            "This is the content, this is the content, this is the content, this is the content."
-        },
-        {
-          title: "zsdevX/Dartey",
-          description:
-            "This is description, this is description, this is description.",
-          avatar: "https://i.loli.net/2017/08/21/599a521472424.jpg",
-          content:
-            "This is the content, this is the content, this is the content, this is the content."
-        },
         {
           title: "zsdevX/Dartey",
           description:

@@ -72,7 +72,7 @@
               </div>
             </div>
 
-            <home-tags name="name1" />
+            <home-tags @logoutCB="logout" />
           </div>
 
           <div class="flex-3 col ml5 xs-hide">
@@ -82,7 +82,9 @@
           </div>
         </div>
       </Content>
-      <Footer class="layout-footer-center">2020-2021 &copy; 一缕清风</Footer>
+      <router-link to="/UserLayout">测试跳转</router-link>
+      <Footer class="layout-footer-center"><div @click="logout()">2020-2021 &copy; 一缕清风</div></Footer>
+      
     </Layout>
   </div>
 </template>
@@ -138,8 +140,8 @@ export default {
 
   methods: {
     logout: function() {
-      this.$router.push({ path: "/UserLayout", query: { setid: 123456 } });
-      // this.$router.push({path:'/UserLayout',params:{setid:111222}});
+      // this.$router.push({ path: "/UserLayout", query: { setid: 123456 } });
+      this.$router.push({path:'/UserLayout',params:{setid:111222}});
     }
   }
 };

@@ -11,7 +11,7 @@
       <span>location:</span>
       <span>广州</span>
     </div>
-    <Divider />
+    <Divider dashed />
     <div class="personal-item">
       <img src="../../../src/assets/home/star.svg" alt srcset />
       <span>star:</span>

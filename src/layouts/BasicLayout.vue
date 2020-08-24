@@ -48,14 +48,12 @@
         </div>
       </div>
 
-
-
       <Content class="content">
         <div class="row row-content">
           <div class="flex-7 mr30 col right-section">
             <div class="flex">
               <div class="carousel flex-3">
-                <Swiper
+                <swiper
                   v-if="slidesReal.length > 0"
                   :autoPlay="true"
                   :showIndicator="true"
@@ -63,23 +61,23 @@
                   duration="800"
                   style="w100p"
                 >
-                  <Slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
+                  <slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
                     <img class="w100p" :src="item.img" alt srcset />
-                  </Slide>
-                </Swiper>
+                  </slide>
+                </swiper>
               </div>
               <div class="showcolumn col flex-1 xs-hide">
                 <div>我要上头条</div>
                 <div>使用帮助</div>
               </div>
             </div>
-            <HomeTags name="name1" />
+            <home-tags name="name1" />
           </div>
 
           <div class="flex-3 col ml5 xs-hide">
-            <PersonalInformation />
-            <Notice />
-            <About />
+            <personal-information />
+            <notice />
+            <about />
           </div>
         </div>
       </Content>
@@ -94,7 +92,8 @@ import {
   About,
   Notice,
   PersonalInformation,
-  HomeTags
+  HomeTags,
+  ListShow
 } from "@/components/home";
 
 export default {
@@ -105,7 +104,8 @@ export default {
     About,
     Notice,
     PersonalInformation,
-    HomeTags
+    HomeTags,
+    ListShow
   },
   data() {
     return {

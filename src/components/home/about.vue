@@ -1,5 +1,5 @@
 <template>
-  <Card class="mt10 w100p aaaa">
+  <Card class="mt10 w100p ">
     <p slot="title" class="text-left">关于</p>
     <p class="text-left mt5">
       <Badge color="cyan" text="我要反馈" />
@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name:'about',
+  name:'About',
   data() {
     return {};
   }

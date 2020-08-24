@@ -13,7 +13,7 @@
           <div class="layout-nav">
             <div name="1" class="xs-hide">
               <Poptip trigger="hover" title="扫描APP下载" placement="bottom">
-                <Icon type="ios-navigate" />  App下载
+                <Icon type="ios-navigate" />App下载
                 <div slot="content">
                   <img id="down_app" :src="down_app" alt srcset />
                 </div>
@@ -21,7 +21,7 @@
             </div>
             <div name="2" class="xs-hide">
               <Poptip trigger="hover" title="App扫描登陆" placement="bottom">
-                <Icon type="ios-keypad" />  App登陆
+                <Icon type="ios-keypad" />App登陆
                 <div slot="content">
                   <img id="down_app" :src="app_login" alt srcset />
                 </div>
@@ -269,15 +269,15 @@ export default {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 1368px) and (max-width: 1980px) {
+@media screen and (min-width: @main-laptop-min-width) and (max-width: @main-laptop-max-width) {
   .content,
   .header {
-    width: @main-laptop-width;
+    width: @main-laptop;
     margin: 0 auto;
   }
 }
 
-@media screen and(max-width: 480px) {
+@media screen and(max-width: @main-mobile-max-width) {
   .xs-hide {
     display: none;
   }

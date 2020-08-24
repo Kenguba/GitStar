@@ -86,7 +86,7 @@
             </Tabs>
           </div>
 
-          <div class="flex-2 col ml5 xs-hide">
+          <div class="flex-3 col ml5 xs-hide">
             <Card class="w100p h300">
               <p slot="title" class="text-left">个人信息</p>
             </Card>

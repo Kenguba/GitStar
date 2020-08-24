@@ -5,7 +5,7 @@
         <div class="header">
           <router-link to="/">
             <div class="layout-logo">
-              <img :src="logo_address" alt srcset />
+              <img class="img-logo-height" :src="logo_address" alt srcset />
               <span class="xs-hide">GitStart</span>
             </div>
           </router-link>
@@ -287,6 +287,9 @@ export default {
   .right-section {
     margin-right: 0;
     background: #fff;
+  }
+  .img-logo-height{
+    height: 30px;
   }
 }
 

@@ -28,7 +28,7 @@
               </Poptip>
             </div>
             <div name="3">
-              <Dropdown>
+              <Dropdown  trigger="click">
                 <div id="profile">
                   <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                   <div>一缕清风</div>

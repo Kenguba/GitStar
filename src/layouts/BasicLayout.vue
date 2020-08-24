@@ -50,7 +50,7 @@
 
       <Content class="content">
         <div class="row row-content">
-          <div class="flex-7 mr30 col right-section">
+          <div class="left-flex mr30 col right-section">
             <div class="flex">
               <div class="carousel w100p flex-3">
                 <Swiper
@@ -220,6 +220,17 @@ export default {
     margin-left: 0.5rem;
     margin-top: 2px;
   }
+}
+.left-flex {
+  flex: @home-left-flex;
+  display: flex;
+  overflow: hidden;
+}
+
+.right-flex {
+  flex: @home-right-flex;
+  display: flex;
+  overflow: hidden;
 }
 
 .row {

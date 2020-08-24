@@ -1,13 +1,15 @@
 <template>
   <div id="BlankLayout">
-    <router-view/>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BlankLayout'
-}
+  name: "BlankLayout"
+};
 </script>
 
 <style lang="less">

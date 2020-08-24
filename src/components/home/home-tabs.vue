@@ -5,8 +5,12 @@
         <div class="list-wrap" v-for="(item,index) in data1" :key="index">
           <div class="upper-strata">
             <div>
+<<<<<<< HEAD
               <Avatar class="mr5" src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
               zsdevX/Dartey
+=======
+              <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />zsdevX/Dartey
+>>>>>>> 框架设计基本完毕,等待二次开发
             </div>
             <strong>
               <Badge color="blue" />Go
@@ -21,11 +25,16 @@
         </div>
       </div>
     </TabPane>
+<<<<<<< HEAD
     <TabPane label="star记录" name="name2"></TabPane>
     <TabPane label="Watch记录" name="name3">标签三的内容</TabPane>
     <TabPane label="Fork记录" name="name4">标签三的内容</TabPane>
     <TabPane label="Follow记录" name="name5">标签三的内容</TabPane>
     <TabPane label="排行榜" name="name6">标签三的内容</TabPane>
+=======
+    <TabPane label="标签二" name="name2"></TabPane>
+    <TabPane label="标签三" name="name3">标签三的内容</TabPane>
+>>>>>>> 框架设计基本完毕,等待二次开发
   </Tabs>
 </template>
 

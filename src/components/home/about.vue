@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
   <Card class="mt10 w100p ken-card">
+=======
+  <Card class="mt10 w100p ">
+>>>>>>> 框架设计基本完毕,等待二次开发
     <p slot="title" class="text-left">关于</p>
     <p class="text-left ">
       <Badge color="cyan" text="我要反馈" />

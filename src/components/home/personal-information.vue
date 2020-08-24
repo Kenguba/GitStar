@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
   <Card class="w100p personal ken-card">
+=======
+  <Card class="w100p personal">
+>>>>>>> 框架设计基本完毕,等待二次开发
     <p slot="title" class="text-left">个人信息</p>
     <div class="personal-item">
       <img src="../../../src/assets/home/name.svg" alt srcset />

@@ -38,11 +38,14 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+<<<<<<< HEAD
   externals: { // <-添加
     'vue': 'Vue',
     'vue-router': 'VueRouter',
     'ViewUI': 'ViewUI',
   },
+=======
+>>>>>>> 框架设计基本完毕,等待二次开发
   module: {
     rules: [
       // ...(config.dev.useEslint ? [createLintingRule()] : []),

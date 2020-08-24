@@ -1,5 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+<<<<<<< HEAD
 // import Vue from 'vue'
 // import VueRouter from 'vue-router'
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -21,6 +22,21 @@ Vue.config.productionTip = false
 
 // import { Plugin } from "vue-fragments";
 // Vue.use(Plugin);
+=======
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
+import './styles/index.less';
+import './styles/commom.less';
+import VueRouter from 'vue-router'
+
+Vue.config.productionTip = false
+Vue.use(ViewUI);
+Vue.use(VueRouter) 
+
+>>>>>>> 框架设计基本完毕,等待二次开发
 
 
 // Vue.use(ViewUI, {
@@ -35,6 +51,7 @@ Vue.config.productionTip = false
 
 
 
+<<<<<<< HEAD
 router.beforeEach((to, from, next) => {
   if (to.matched.some(res => res.meta.requireAuth)) { // 验证是否需要登陆 
     if (sessionStorage.getItem('sid')) { // 查询本地存储信息是否已经登陆 
@@ -51,6 +68,9 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+=======
+
+>>>>>>> 框架设计基本完毕,等待二次开发
 
 /* eslint-disable no-new */
 new Vue({

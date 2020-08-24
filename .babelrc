@@ -1,5 +1,6 @@
 {
   "presets": [
+<<<<<<< HEAD
     [
       "env",
       {
@@ -34,3 +35,21 @@
     }
   }
 }
+=======
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }],
+    "stage-2"
+  ],
+  "plugins": ["transform-vue-jsx", "transform-runtime"],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": ["transform-vue-jsx", "transform-es2015-modules-commonjs", "dynamic-import-node"]
+    }
+  }
+}
+>>>>>>> 框架设计基本完毕,等待二次开发

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import Vue from 'vue'
 // import BlankLayout from '@/layouts/BlankLayout'
 // import BasicLayout from '@/layouts/BasicLayout'
@@ -6,12 +7,22 @@
 // import home from '@/page/home.vue'
 import Router from 'vue-router'
 Vue.use('vue-router')
+=======
+import Vue from 'vue'
+import Router from 'vue-router'
+import BlankLayout from '@/layouts/BlankLayout'
+import BasicLayout from '@/layouts/BasicLayout'
+import UserLayout from '@/layouts/UserLayout'
+
+Vue.use(Router)
+>>>>>>> 框架设计基本完毕,等待二次开发
 
 export default new Router({
   routes: [
     {
       path: '/',
       name: 'BlankLayout',
+<<<<<<< HEAD
       redirect: 'basic/home',
       component: resolve => require(['../layouts/BlankLayout'], resolve), //懒加载BlankLayout
       children: [
@@ -50,6 +61,24 @@ export default new Router({
               component: resolve => require(['../page/auth_by_self'], resolve)
             }
           ]
+=======
+      redirect: 'BasicLayout',
+      component: resolve => require(['../layouts/BlankLayout'], resolve), //懒加载BlankLayout
+      children: [
+        {
+          path: 'BasicLayout',
+          name: 'BasicLayout',
+          component: resolve => require(['../layouts/BasicLayout'], resolve), //懒加载BlankLayout, //懒加载BasicLayout
+          meta: {
+            keepAlive: true,
+            title: '首页应用'
+          }
+        },
+        {
+          path: 'UserLayout',
+          name: 'UserLayout',
+          component: UserLayout, //懒加载UserLayout
+>>>>>>> 框架设计基本完毕,等待二次开发
         }
       ]
     }

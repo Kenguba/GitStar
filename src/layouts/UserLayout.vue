@@ -1,27 +1,30 @@
 <template>
-  <div class="user-login-container">
-    <!-- <router-link to="/"> <div class="red" to="/">首页</div> </router-link> -->
-    <img src="https://file.iviewui.com/admin-pro-dist/img/logo.7b8cc895.png" alt />
-    <p class="text-center">iView Admin Pro 企业级中台前端/设计解决方案</p>
-    <Input placeholder="请输入GiuHub账号" class="mt20">
-      <Icon type="ios-contact" slot="prefix" />
-    </Input>
-    <Input placeholder="请输入密码" type="password" password class="mt20">
-      <Icon type="ios-lock" slot="prefix" />
-    </Input>
+  <div class="bg-warp">
+    <div class="user-login-container">
+      <!-- <router-link to="/"> <div class="red" to="/">首页</div> </router-link> -->
+      <img src="https://file.iviewui.com/admin-pro-dist/img/logo.7b8cc895.png" alt />
+      <p class="text-center">iView Admin Pro 企业级中台前端/设计解决方案</p>
+      <Input placeholder="请输入GiuHub账号" class="mt20">
+        <Icon type="ios-contact" slot="prefix" />
+      </Input>
+      <Input placeholder="请输入密码" type="password" password class="mt20">
+        <Icon type="ios-lock" slot="prefix" />
+      </Input>
 
-    <div class="w100p mt15 start">
-      <Checkbox v-model="single" >自动登录</Checkbox>
-    </div>
+      <div class="w100p mt15 start">
+        <Checkbox v-model="single">自动登录</Checkbox>
+      </div>
 
-    <Button type="success mt15">登陆</Button>
+      <Button type="success mt15">登陆</Button>
 
-    <div class="other-login mt10">
-      <span>其他方式登陆</span>
-      <img src="../../src/assets/commom/icon-wechat.svg" alt srcset />
-      <img src="../../src/assets/commom/icon-qq.svg" alt srcset />
-      <img src="../../src/assets/commom/icon-weibo.svg" alt srcset />
-      <img src="../../src/assets/commom/icon-wechat.svg" alt srcset />
+      <div class="other-login mt10">
+        <span>其他方式登陆</span>
+        <img src="../../src/assets/commom/icon-github.svg" alt srcset />
+        <img src="../../src/assets/commom/icon-wechat.svg" alt srcset />
+        <img src="../../src/assets/commom/icon-qq.svg" alt srcset />
+        <img src="../../src/assets/commom/icon-weibo.svg" alt srcset />
+        <img src="../../src/assets/commom/icon-wechat.svg" alt srcset />
+      </div>
     </div>
   </div>
 </template>
@@ -45,6 +48,14 @@ export default {
 
 <style scoped lang='less'>
 @import "../styles/theme.less";
+
+.bg-warp {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 .user-login-container {
   width: 368px;
@@ -71,12 +82,12 @@ export default {
   }
 }
 
-
-
 @media screen and(max-width: @main-mobile-max-width) {
   .xs-hide {
     display: none;
   }
+  .user-login-container {
+    width: 90%;
+  }
 }
-
 </style>

@@ -49,7 +49,7 @@
       </div>
 
       <Content class="content">
-        <div id="row">
+        <div class="row row-content">
           <div class="flex-7 mr30 col right-section">
             <div class="flex">
               <div class="carousel w100p flex-3">
@@ -167,17 +167,16 @@ export default {
   height: 100%;
   /* background: #5b6270; */
   border-radius: 3px;
-  float: left;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 500;
   img {
-    margin-left: 3px;
-    height: 70%;
+    margin-left: 10px;
+    height: 60%;
   }
   span {
     margin-top: 3px;
@@ -223,10 +222,9 @@ export default {
   }
 }
 
-#row {
+.row {
   display: flex;
   height: 800px;
-  margin-top: 20px;
   .carousel {
     height: 400px;
     width: 300px;
@@ -266,20 +264,27 @@ export default {
   height: @header-height;
 }
 
+.row-content {
+  margin-top: 20px;
+}
+
 @media screen and (min-width: 1368px) and (max-width: 1980px) {
   .content,
   .header {
     width: 1368px;
     margin: 0 auto;
   }
-  .right-section {
-    margin-right: 0;
-  }
 }
 
 @media screen and(max-width: 480px) {
   .xs-hide {
     display: none;
+  }
+  .row-content {
+    margin-top: 0px;
+  }
+  .right-section {
+    margin-right: 0;
   }
 }
 </style>

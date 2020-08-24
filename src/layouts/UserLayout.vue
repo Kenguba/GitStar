@@ -1,8 +1,9 @@
 <template>
   <div class="bg-warp">
     <div class="user-login-container">
-      <!-- <router-link to="/"> <div class="red" to="/">首页</div> </router-link> -->
+      <router-link to="/"> 
       <img src="https://file.iviewui.com/admin-pro-dist/img/logo.7b8cc895.png" alt />
+      </router-link>
       <p class="text-center">iView Admin Pro 企业级中台前端/设计解决方案</p>
       <Input placeholder="请输入GiuHub账号" class="mt20">
         <Icon type="ios-contact" slot="prefix" />

@@ -28,7 +28,7 @@
               </Poptip>
             </div>
             <div name="3">
-              <Dropdown  trigger="click">
+              <Dropdown  trigger="click" class="Dropdown">
                 <div id="profile">
                   <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                   <div>一缕清风</div>
@@ -295,5 +295,9 @@ export default {
 
 .right-section {
   background: #fff;
+}
+
+.Dropdown{
+  cursor: pointer;
 }
 </style>

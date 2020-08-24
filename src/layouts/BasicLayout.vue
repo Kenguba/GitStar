@@ -19,7 +19,7 @@
                   </div>
                 </Poptip>
               </MenuItem>
-              <MenuItem name="2">
+              <MenuItem name="2" class="xs-hide">
                 <Poptip trigger="hover" title="App扫描登陆" placement="bottom">
                   <Icon type="ios-keypad" />App登陆
                   <div slot="content">
@@ -75,8 +75,12 @@
               </div>
             </div>
             <Tabs value="name1">
-              <TabPane :label="label" name="name1">标签一的内容</TabPane>
-              <TabPane label="互粉列表" name="name2">标签二的内容</TabPane>
+              <TabPane :label="label" name="name1">
+                <ListShow></ListShow>
+              </TabPane>
+              <TabPane label="互粉列表" name="name2">
+                  <ListShow></ListShow>
+              </TabPane>
               <TabPane label="Star记录" name="name3">标签三的内容</TabPane>
               <TabPane label="Watch记录" name="name4">标签三的内容</TabPane>
               <TabPane label="Fork记录" name="name5">标签三的内容</TabPane>
@@ -101,14 +105,15 @@
 <script>
 import web from "../../config/web.base.js";
 import { Swiper, Slide } from "vue-swiper-component";
-import { About, Notice } from "@/components/home";
+import { About, Notice,ListShow } from "@/components/home";
 
 export default {
   components: {
     Swiper,
     Slide,
     About,
-    Notice
+    Notice,
+    ListShow
   },
   data() {
     return {

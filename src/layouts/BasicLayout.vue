@@ -37,9 +37,7 @@
                     <DropdownItem>帐户信息</DropdownItem>
                     <DropdownItem>个人仓库</DropdownItem>
                     <DropdownItem disabled>点赞统计</DropdownItem>
-                    <DropdownItem>收入来源</DropdownItem>
-                    <DropdownItem divided>设置</DropdownItem>
-
+                    <DropdownItem divided>设置中心</DropdownItem>
                     <DropdownItem divided>
                       <div @click="logout()">退出</div>
                     </DropdownItem>
@@ -176,10 +174,11 @@ export default {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 28px;
+  font-size: 2.4rem;
   font-weight: 500;
   img {
-    height: 80%;
+    margin-left:3px ;
+    height: 70%;
   }
   span {
     margin-top: 3px;

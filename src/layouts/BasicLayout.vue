@@ -289,7 +289,7 @@ export default {
     background: #fff;
   }
   .img-logo-height{
-    height: 30px;
+    height: 30px !important;
   }
 }
 

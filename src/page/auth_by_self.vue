@@ -44,6 +44,7 @@ export default {
 
 <style scoped lang='less'>
 @import "../styles/config.less";
+
 .warp {
   margin: 30px auto;
   display: flex;
@@ -70,5 +71,17 @@ export default {
   justify-content: start;
   align-items: center;
   width: 80%;
+}
+
+@media screen and(max-width: @main-mobile-max-width) {
+  .xs-hide {
+    display: none;
+  }
+
+  .warp {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
 }
 </style>

@@ -5,7 +5,7 @@ import Router from 'vue-router'
 // import UserLayout from '@/layouts/UserLayout'
 // import login from '@/page/login.vue'
 // import home from '@/page/home.vue'
-Vue.use(Router)
+Vue.use('vue-router')
 
 export default new Router({
   routes: [

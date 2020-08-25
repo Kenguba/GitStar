@@ -38,6 +38,10 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  externals: { // <-添加
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+  },
   module: {
     rules: [
       // ...(config.dev.useEslint ? [createLintingRule()] : []),

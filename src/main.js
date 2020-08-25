@@ -2,18 +2,22 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueRouter from 'vue-router'
 import router from './router'
+// import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 import './styles/index.less';
 import './styles/commom.less';
-import VueRouter from 'vue-router'
 
 
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(ViewUI);
+
 
 // import { Plugin } from "vue-fragments";
 // Vue.use(Plugin);

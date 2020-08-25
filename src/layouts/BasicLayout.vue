@@ -4,26 +4,16 @@
       <div class="header-container">
         <div class="header">
           <router-link to="/">
-<<<<<<< HEAD
             <div class="layout-logo xs-hide">
               <img class="img-logo-height" :src="logo_address" alt srcset />
               <span >GitStart</span>
-=======
-            <div class="layout-logo">
-              <img :src="logo_address" alt srcset />
-              <span>GitStart</span>
->>>>>>> 框架设计基本完毕,等待二次开发
             </div>
           </router-link>
 
           <div class="layout-nav">
             <div name="1" class="xs-hide">
               <Poptip trigger="hover" title="扫描APP下载" placement="bottom">
-<<<<<<< HEAD
                 <Icon type="ios-navigate" />App下载
-=======
-                <Icon type="ios-navigate" />  App下载
->>>>>>> 框架设计基本完毕,等待二次开发
                 <div slot="content">
                   <img id="down_app" :src="down_app" alt srcset />
                 </div>
@@ -31,22 +21,14 @@
             </div>
             <div name="2" class="xs-hide">
               <Poptip trigger="hover" title="App扫描登陆" placement="bottom">
-<<<<<<< HEAD
                 <Icon type="ios-keypad" />App登陆
-=======
-                <Icon type="ios-keypad" />  App登陆
->>>>>>> 框架设计基本完毕,等待二次开发
                 <div slot="content">
                   <img id="down_app" :src="app_login" alt srcset />
                 </div>
               </Poptip>
             </div>
             <div name="3">
-<<<<<<< HEAD
               <Dropdown  trigger="click" class="Dropdown">
-=======
-              <Dropdown>
->>>>>>> 框架设计基本完毕,等待二次开发
                 <div id="profile">
                   <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                   <div>一缕清风</div>
@@ -65,47 +47,8 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <router-view></router-view>
       <router-link to="/user">测试跳转</router-link>
-=======
-
-      <Content class="content">
-        <div class="row row-content">
-          <div class="flex-7 mr30 col right-section">
-            <div class="flex">
-              <div class="carousel flex-3">
-                <swiper
-                  v-if="slidesReal.length > 0"
-                  :autoPlay="true"
-                  :showIndicator="true"
-                  interval="3000"
-                  duration="800"
-                  style="w100p"
-                >
-                  <slide v-for="(item,index) in slidesReal" :key="index">
-                    <img class="w100p" :src="item.img" alt srcset />
-                  </slide>
-                </swiper>
-              </div>
-              <div class="showcolumn col flex-1 xs-hide">
-                <div>我要上头条</div>
-                <div>使用帮助</div>
-              </div>
-            </div>
-
-            <home-tags @logoutCB="logout" />
-          </div>
-
-          <div class="flex-3 col ml5 xs-hide">
-            <personal-information />
-            <notice />
-            <about />
-          </div>
-        </div>
-      </Content>
-      <router-link to="/UserLayout">测试跳转</router-link>
->>>>>>> 框架设计基本完毕,等待二次开发
       <Footer class="layout-footer-center">
         <div @click="logout()">2020-2021 &copy; 一缕清风</div>
       </Footer>
@@ -164,13 +107,8 @@ export default {
 
   methods: {
     logout: function() {
-<<<<<<< HEAD
       // this.$router.push({ path: "/user", query: { setid: 123456 } });
       this.$router.push({ path: "/user", params: { setid: 111222 } });
-=======
-      // this.$router.push({ path: "/UserLayout", query: { setid: 123456 } });
-      this.$router.push({ path: "/UserLayout", params: { setid: 111222 } });
->>>>>>> 框架设计基本完毕,等待二次开发
     }
   },
   beforeRouteLeave(to, from, next) {
@@ -182,11 +120,7 @@ export default {
 
 
 <style scoped lang='less'>
-<<<<<<< HEAD
 @import "../styles/config.less";
-=======
-@import "../styles/theme.less";
->>>>>>> 框架设计基本完毕,等待二次开发
 
 .layout-logo {
   height: 100%;
@@ -200,12 +134,8 @@ export default {
   font-size: 2.2rem;
   font-weight: 500;
   img {
-<<<<<<< HEAD
     margin-left: 5px;
     height: @img-logo-height;
-=======
-    height: 60%;
->>>>>>> 框架设计基本完毕,等待二次开发
   }
   span {
     margin-top: 3px;
@@ -305,26 +235,15 @@ export default {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
 @media screen and (min-width: @main-laptop-min-width) and (max-width: @main-laptop-max-width) {
   .content,
   .header {
     width: @main-laptop;
-=======
-@media screen and (min-width: 1368px) and (max-width: 1980px) {
-  .content,
-  .header {
-    width: @main-laptop-width;
->>>>>>> 框架设计基本完毕,等待二次开发
     margin: 0 auto;
   }
 }
 
-<<<<<<< HEAD
 @media screen and(max-width: @main-mobile-max-width) {
-=======
-@media screen and(max-width: 480px) {
->>>>>>> 框架设计基本完毕,等待二次开发
   .xs-hide {
     display: none;
   }
@@ -335,22 +254,16 @@ export default {
     margin-right: 0;
     background: #fff;
   }
-<<<<<<< HEAD
   .img-logo-height{
     height: @img-logo-height-mobile !important;
   }
-=======
->>>>>>> 框架设计基本完毕,等待二次开发
 }
 
 .right-section {
   background: #fff;
 }
-<<<<<<< HEAD
 
 .Dropdown{
   cursor: pointer;
 }
-=======
->>>>>>> 框架设计基本完毕,等待二次开发
 </style>

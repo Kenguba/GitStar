@@ -36,10 +36,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
-<<<<<<< HEAD
         comments: false,
-=======
->>>>>>> 框架设计基本完毕,等待二次开发
         compress: {
           warnings: false
         }

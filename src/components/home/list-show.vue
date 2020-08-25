@@ -2,11 +2,7 @@
   <div>
     <div v-for="(item,index) in data1" :key="index">
       <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
-<<<<<<< HEAD
       <span class="ml10">zsdevX/Dartey</span>
-=======
-      zsdevX/Dartey
->>>>>>> 框架设计基本完毕,等待二次开发
       <ul class="likebar">
         <li>
           <Icon type="ios-star-outline" />89

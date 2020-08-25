@@ -18,13 +18,13 @@ export default new Router({
         {
           path: 'basic',
           name: 'basic',
-          component: resolve => require(['../layouts/BasicLayout'], resolve), //懒加载BlankLayout, //懒加载BasicLayout
+          component: () => import(/* webpackChunkName: 'ImportFuncDemo' */ '../layouts/BasicLayout'),
           redirect: 'basic/home',
           children: [
             {
               path: 'home',
               name: 'home',
-              component: resolve => require(['../page/home'], resolve),
+              component: resolve => require.ensure([], () => resolve(require('../page/home')), 'demo1'),
               meta: {
                 keepAlive: true,   //是否保存页面状态
                 requireAuth: true, // 配置此条，进入页面前判断是否需要登陆

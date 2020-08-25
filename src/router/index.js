@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+// import Vue from 'vue'
 // import BlankLayout from '@/layouts/BlankLayout'
 // import BasicLayout from '@/layouts/BasicLayout'
 // import UserLayout from '@/layouts/UserLayout'
 // import login from '@/page/login.vue'
 // import home from '@/page/home.vue'
+import Router from 'vue-router'
 Vue.use('vue-router')
 
 export default new Router({

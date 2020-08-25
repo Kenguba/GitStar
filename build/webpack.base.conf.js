@@ -41,6 +41,7 @@ module.exports = {
   externals: { // <-添加
     'vue': 'Vue',
     'vue-router': 'VueRouter',
+    'ViewUI': 'ViewUI',
   },
   module: {
     rules: [

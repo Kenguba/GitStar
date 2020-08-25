@@ -3,21 +3,20 @@
 // import Vue from 'vue'
 // import VueRouter from 'vue-router'
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import ViewUI from 'view-design';
 
 import App from './App'
 import router from './router'
 
 
-import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
-import './styles/index.less';
 import './styles/commom.less';
 
 
 
 Vue.config.productionTip = false
 // Vue.use(VueRouter)
-Vue.use(ViewUI);
+// Vue.use(ViewUI);
 
 
 // import { Plugin } from "vue-fragments";

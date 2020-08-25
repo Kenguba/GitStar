@@ -48,7 +48,7 @@ export default {
       this.$router.push({
         path: "/user/auth_by_self",
         query: { setQueryId: 111222 },
-        params: { setparamsId: 111222 }
+        // params: { setparamsId: 111222 }
       });
     },
     logout: function() {

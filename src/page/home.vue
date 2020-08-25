@@ -1,59 +1,38 @@
 <template>
-  <div class="layout">
-    <Layout>
-      <div class="header-container">
-        <div class="header">
-          <router-link to="/">
-            <div class="layout-logo xs-hide">
-              <img class="img-logo-height" :src="logo_address" alt srcset />
-              <span >GitStart</span>
-            </div>
-          </router-link>
-
-          <div class="layout-nav">
-            <div name="1" class="xs-hide">
-              <Poptip trigger="hover" title="扫描APP下载" placement="bottom">
-                <Icon type="ios-navigate" />App下载
-                <div slot="content">
-                  <img id="down_app" :src="down_app" alt srcset />
-                </div>
-              </Poptip>
-            </div>
-            <div name="2" class="xs-hide">
-              <Poptip trigger="hover" title="App扫描登陆" placement="bottom">
-                <Icon type="ios-keypad" />App登陆
-                <div slot="content">
-                  <img id="down_app" :src="app_login" alt srcset />
-                </div>
-              </Poptip>
-            </div>
-            <div name="3">
-              <Dropdown  trigger="click" class="Dropdown">
-                <div id="profile">
-                  <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
-                  <div>一缕清风</div>
-                </div>
-                <DropdownMenu slot="list">
-                  <DropdownItem>帐户信息</DropdownItem>
-                  <DropdownItem>个人仓库</DropdownItem>
-                  <DropdownItem disabled>点赞统计</DropdownItem>
-                  <DropdownItem divided>设置中心</DropdownItem>
-                  <DropdownItem divided>
-                    <div @click="logout()">退出</div>
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </div>
+  <Content class="content">
+    <div class="row row-content">
+      <div class="flex-7 mr30 col right-section">
+        <div class="flex">
+          <div class="carousel flex-3">
+            <swiper
+              v-if="slidesReal.length > 0"
+              :autoPlay="true"
+              :showIndicator="true"
+              interval="3000"
+              duration="800"
+              style="w100p"
+            >
+              <slide v-for="(item,index) in slidesReal" :key="index">
+                <img class="w100p" :src="item.img" alt srcset />
+              </slide>
+            </swiper>
+          </div>
+          <div class="showcolumn col flex-1 xs-hide">
+            <div>我要上头条</div>
+            <div>使用帮助</div>
           </div>
         </div>
+
+        <home-tags @logoutCB="logout" />
       </div>
-      <router-view></router-view>
-      <router-link to="/user">测试跳转</router-link>
-      <Footer class="layout-footer-center">
-        <div @click="logout()">2020-2021 &copy; 一缕清风</div>
-      </Footer>
-    </Layout>
-  </div>
+
+      <div class="flex-3 col ml5 xs-hide">
+        <personal-information />
+        <notice />
+        <about />
+      </div>
+    </div>
+  </Content>
 </template>
 <script>
 import web from "../../config/web.base.js";
@@ -254,7 +233,7 @@ export default {
     margin-right: 0;
     background: #fff;
   }
-  .img-logo-height{
+  .img-logo-height {
     height: @img-logo-height-mobile !important;
   }
 }
@@ -263,7 +242,7 @@ export default {
   background: #fff;
 }
 
-.Dropdown{
+.Dropdown {
   cursor: pointer;
 }
 </style>

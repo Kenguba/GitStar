@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BlankLayout from '@/layouts/BlankLayout'
-import BasicLayout from '@/layouts/BasicLayout'
-import UserLayout from '@/layouts/UserLayout'
-
+// import BlankLayout from '@/layouts/BlankLayout'
+// import BasicLayout from '@/layouts/BasicLayout'
+// import UserLayout from '@/layouts/UserLayout'
+// import login from '@/page/login.vue'
+// import home from '@/page/home.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -11,22 +12,38 @@ export default new Router({
     {
       path: '/',
       name: 'BlankLayout',
-      redirect: 'BasicLayout',
+      redirect: 'basic/home',
       component: resolve => require(['../layouts/BlankLayout'], resolve), //懒加载BlankLayout
       children: [
         {
-          path: 'BasicLayout',
-          name: 'BasicLayout',
+          path: 'basic',
+          name: 'basic',
           component: resolve => require(['../layouts/BasicLayout'], resolve), //懒加载BlankLayout, //懒加载BasicLayout
-          meta: {
-            keepAlive: true,
-            title: '首页应用'
-          }
+          redirect: 'basic/home',
+          children: [
+            {
+              path: 'home',
+              name: 'home',
+              component: resolve => require(['../page/home'], resolve),
+              meta: {
+                keepAlive: true,
+                title: '首页应用'
+              },
+            }
+          ]
         },
         {
-          path: 'UserLayout',
-          name: 'UserLayout',
-          component: UserLayout, //懒加载UserLayout
+          path: 'user',
+          name: 'user',
+          component: resolve => require(['../layouts/UserLayout'], resolve),
+          redirect: 'user/login',
+          children: [
+            {
+              path: 'login',
+              name: 'login',
+              component: resolve => require(['../page/login'], resolve)
+            }
+          ]
         }
       ]
     }

@@ -39,7 +39,7 @@ router.beforeEach((to, from, next) => {
       //   path: '/user/login', // 未登录则跳转至login页面 
       //   query: { redirect: to.fullPath } // 登陆成功后回到当前页面，这里传值给login页面，to.fullPath为当前点击的页面 
       // });
-      alert("你没有登陆")
+      console.log("你没有登陆")
       next();
     }
   } else {

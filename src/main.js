@@ -8,14 +8,15 @@ import 'view-design/dist/styles/iview.css';
 import './styles/index.less';
 import './styles/commom.less';
 import VueRouter from 'vue-router'
-import { Plugin } from "vue-fragments";
+
 
 
 Vue.config.productionTip = false
-Vue.use(Plugin);
 Vue.use(VueRouter)
 Vue.use(ViewUI);
 
+// import { Plugin } from "vue-fragments";
+// Vue.use(Plugin);
 
 
 // Vue.use(ViewUI, {

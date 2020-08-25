@@ -56,7 +56,9 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    // 在webpack打包的过程中，将多余文件去掉，如map文件，
+    // 将productionSourceMap的值修改为false，就可以在编译时不生成.map文件了
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
@@ -64,7 +66,7 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
+    productionGzip: true,
     productionGzipExtensions: ['js', 'css'],
 
     // Run the build command with an extra argument to

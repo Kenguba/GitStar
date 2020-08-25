@@ -99,7 +99,7 @@ export default {
 
 
 <style scoped lang='less'>
-@import "../styles/theme.less";
+@import "../styles/config.less";
 
 .layout-logo {
   height: 100%;

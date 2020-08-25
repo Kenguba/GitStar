@@ -1,14 +1,14 @@
 <template>
   <div class="bg-warp">
     <div class="user-login-container">
-      <router-link to="/"> 
-      <img src="https://file.iviewui.com/admin-pro-dist/img/logo.7b8cc895.png" alt />
+      <router-link to="/">
+        <img src="https://file.iviewui.com/admin-pro-dist/img/logo.7b8cc895.png" alt />
       </router-link>
-      <p class="text-center">iView Admin Pro 企业级中台前端/设计解决方案</p>
-      <Input class="mt20" placeholder="请输入GiuHub账号"  size="large">
+      <p class="text-center" @click="logout()">iView Admin Pro 企业级中台前端/设计解决方案</p>
+      <Input class="mt20" placeholder="请输入GiuHub账号" size="large">
         <Icon type="ios-contact" slot="prefix" />
       </Input>
-      <Input class="mt20" placeholder="请输入密码" size="large" type="password" password >
+      <Input class="mt20" placeholder="请输入密码" size="large" type="password" password>
         <Icon type="ios-lock" slot="prefix" />
       </Input>
 
@@ -16,7 +16,7 @@
         <Checkbox v-model="single">自动登录</Checkbox>
       </div>
 
-      <Button type="success mt15" size="large">登陆</Button>
+      <Button type="success mt15" @click="login()" size="large">登陆</Button>
 
       <div class="other-login mt15">
         <span>其他方式登陆</span>
@@ -42,13 +42,36 @@ export default {
       to.meta.keepAlive = false;
     }
     next();
+  },
+  methods: {
+    login: function() {
+      this.$router.push({
+        path: "/user/auth_by_self",
+        query: { setQueryId: 111222 },
+        params: { setparamsId: 111222 }
+      });
+    },
+    logout: function() {
+      this.$router.push({ path: "/user", query: { setid: 123456 } });
+      // this.$router.push({ path: "/user", params: { setid: 111222 } });
+      // this.$router.push({
+      //   path: "/user/logout",
+      //   replace: true
+      // });
+      // for (let i = 0; i < 10; i++) {
+      // window.open("http://www.baidu.com")
+      // window.history.push("http://www.baidu.com")
+      // window.location.replace("/user/logout")
+      // }
+      // this.$router.go(-1);
+    }
   }
 };
 </script>
 
 
 <style scoped lang='less'>
-@import "../styles/theme.less";
+@import "../styles/config.less";
 
 .bg-warp {
   width: 100vw;

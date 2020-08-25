@@ -26,7 +26,8 @@ export default new Router({
               name: 'home',
               component: resolve => require(['../page/home'], resolve),
               meta: {
-                keepAlive: true,
+                keepAlive: true,   //是否保存页面状态
+                requireAuth: true, // 配置此条，进入页面前判断是否需要登陆
                 title: '首页应用'
               },
             }
@@ -42,6 +43,11 @@ export default new Router({
               path: 'login',
               name: 'login',
               component: resolve => require(['../page/login'], resolve)
+            },
+            {
+              path: 'auth_by_self',
+              name: 'auth_by_self',
+              component: resolve => require(['../page/auth_by_self'], resolve)
             }
           ]
         }
